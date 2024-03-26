@@ -1,0 +1,12 @@
+.wrapper {
+  max-height: 250px;
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  column-gap: 15px;
+}
