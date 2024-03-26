@@ -1,6 +1,7 @@
 import { Accessor, Setter } from 'solid-js';
 import { BsSortDownAlt } from 'solid-icons/bs';
 import { BsSortDown } from 'solid-icons/bs';
+import styles from './Button.module.scss';
 
 export const Button = ({
   setSortDirection,
@@ -11,13 +12,16 @@ export const Button = ({
 }) => {
   const handleClick = () => {
     const nextDirection = sortDirection() === 'asc' ? 'desc' : 'asc';
-    console.log('nextDirection: ', nextDirection);
     setSortDirection(nextDirection);
   };
 
   return (
-    <button onClick={handleClick}>
-      {sortDirection() === 'desc' ? <BsSortDown /> : <BsSortDownAlt />}
+    <button class={styles.button} onClick={handleClick}>
+      {sortDirection() === 'desc' ? (
+        <BsSortDown class={styles.icon} />
+      ) : (
+        <BsSortDownAlt class={styles.icon} />
+      )}
     </button>
   );
 };

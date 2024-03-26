@@ -17,5 +17,5 @@ export const Input = ({
     setValue(e.target.value);
   };
 
-  return <input class={styles.input} value={value()} onInput={handleInput}></input>;
+  return <input placeholder='...начните вводить текст' class={styles.input} value={value()} onInput={handleInput}></input>;
 };
