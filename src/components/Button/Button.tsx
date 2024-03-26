@@ -11,12 +11,13 @@ export const Button = ({
 }) => {
   const handleClick = () => {
     const nextDirection = sortDirection() === 'asc' ? 'desc' : 'asc';
+    console.log('nextDirection: ', nextDirection);
     setSortDirection(nextDirection);
   };
 
   return (
     <button onClick={handleClick}>
-      {sortDirection() === 'asc' ? <BsSortDown /> : <BsSortDownAlt />}
+      {sortDirection() === 'desc' ? <BsSortDown /> : <BsSortDownAlt />}
     </button>
   );
 };
